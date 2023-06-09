@@ -10,18 +10,23 @@
     <h1>Cozinhapp</h1>
 
     <h2>Adicione seus ingredientes</h2>
-    <form action="/ingredientsForm" method="post">
+
+    <form action="/" method="post">
         <ul id="ul-ingredients"></ul>
-        <button id="add-field"
-            onclick="addField()"
-            type="button">Adicionar ingrediente</button>
+        
+        <ul><li>
+            <button onclick="addField()" type="button">Adicionar ingrediente</button>
+        </li></ul>
+        <input type="submit" value="Enviar" />
     </form>
+
     <datalist id="ingredients"></datalist>
 
 </body>
 
 <script>
     var addedIngredients = 0
+
     function resetIfInvalid(el) {
        if (el.value == "")
            return;
@@ -32,13 +37,14 @@
        }
        el.value = "";
     }
+
     function addField() {
         ul = document.getElementById('ul-ingredients');
         li = document.createElement('li');
         input = document.createElement('input');
-        input.id = "ing"+addedIngredients;
+        input.name = "ing"+addedIngredients;
         input.setAttribute('list','ingredients');
-        input.setAttribute('onchage','resetIfInvalid(this);');
+        input.setAttribute('onchange','resetIfInvalid(this);');
         input.setAttribute('type','text');
         input.setAttribute('required','');
         b = document.createElement('button');
