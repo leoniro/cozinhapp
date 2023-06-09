@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinhapp</title>
+</head>
+<body onload="addField();">
+    <script type="module" src="./index.js"></script>
+    <h1>Cozinhapp</h1>
+
+    <h2>Adicione seus ingredientes</h2>
+    <form action="/ingredientsForm" method="post">
+        <ul id="ul-ingredients"></ul>
+        <button id="add-field"
+            onclick="addField()"
+            type="button">Adicionar ingrediente</button>
+    </form>
+    <datalist id="ingredients"></datalist>
+
+</body>
+
+<script>
+    var addedIngredients = 0
+    function resetIfInvalid(el) {
+       if (el.value == "")
+           return;
+       var options = el.list.options;
+       for (var i = 0; i< options.length; i++) {
+           if (el.value == options[i].value)
+               return;
+       }
+       el.value = "";
+    }
+    function addField() {
+        ul = document.getElementById('ul-ingredients');
+        li = document.createElement('li');
+        input = document.createElement('input');
+        input.id = "ing"+addedIngredients;
+        input.setAttribute('list','ingredients');
+        input.setAttribute('onchage','resetIfInvalid(this);');
+        input.setAttribute('type','text');
+        input.setAttribute('required','');
+        b = document.createElement('button');
+        b.setAttribute('onclick','this.parentElement.remove();');
+        b.textContent = 'Remover';
+        li.appendChild(input);
+        li.appendChild(b);
+        ul.appendChild(li);
+        addedIngredients += 1;
+    }
+</script>
+
+</html>

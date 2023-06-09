@@ -1,0 +1,19 @@
+{
+  "name": "cozinhapp",
+  "version": "1.0.0",
+  "description": "Cozinhapp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
