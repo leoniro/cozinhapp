@@ -6,19 +6,21 @@
     <title>Cozinhapp</title>
 </head>
 <body onload="addField();">
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./loadIngredientList.js"></script>
     <h1>Cozinhapp</h1>
 
     <h2>Adicione seus ingredientes</h2>
 
-    <form action="/busca" method="post">
+    <form action="/busca" method="post" autocomplete='off'>
         <ul id="ul-ingredients"></ul>
         
         <ul><li>
-            <button onclick="addField()" type="button">Adicionar ingrediente</button>
+            <button onclick="addField()" type="button">Mais ingredientes</button>
         </li></ul>
         <input type="submit" value="Enviar" />
     </form>
+
+    <p><a href="/criarReceita">Ou adicione sua própria receita!</a></p>
 
     <datalist id="ingredients"></datalist>
 
@@ -47,6 +49,7 @@
         input.setAttribute('onchange','resetIfInvalid(this);');
         input.setAttribute('type','text');
         input.setAttribute('required','');
+        input.setAttribute('autocomplete','false')
         b = document.createElement('button');
         b.setAttribute('onclick','this.parentElement.remove();');
         b.textContent = 'Remover';

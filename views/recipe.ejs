@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= recipe.name %> - Cozinhapp</title>
+</head>
+<body>
+    <h1>Cozinhapp</h1>    
+    <h2><%= recipe.name %></h2>
+    Enviado por: <%= recipe.author %>
+    <h3>Ingredientes:</h3>
+    <ul>
+        <% for (let idx in recipe.ingredients) { %>
+            <li><%= recipe.ingredients[idx] %> - <%= recipe.quantities[idx] %></li>
+        <% } %>
+    </ul>
+    
+    <h2> Instruções: </h2>
+    <% recipe.instructions.split(/\r?\n/).forEach( step => { %>
+        <%= step %><br>
+    <% }) %>
+
+
+</body>
+</html>

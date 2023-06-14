@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinhapp</title>
+</head>
+<body onload="addField();">
+    <script type="module" src="./loadIngredientList.js"></script>
+    <h1>Cozinhapp</h1>
+
+    <h2>Adicione sua própria receita!</h2>
+
+    <form action="/receitaEnviada" method="post" autocomplete='off'>
+        Seu nome: <input type="text" name="author" /><br>
+        Nome da sua receita: <input type="text" name="name" /><br>
+        Ingredientes (quantidade e nome):
+        <ul id="ul-ingredients"></ul>
+        <ul><li>
+            <button onclick="addField()" type="button">Mais ingredientes</button>
+        </li></ul>
+        Modo de preparo:<br>
+        <textarea name="instructions" rows="4" cols="50" ></textarea><br>
+        <input type="submit" value="Enviar" />
+    </form>
+
+    <datalist id="ingredients"></datalist>
+
+</body>
+
+<script>
+    function addField() {
+        ul = document.getElementById('ul-ingredients');
+        li = document.createElement('li');
+        qty = document.createElement('input');
+        qty.name = "qtys";
+        qty.setAttribute('type','text');
+        qty.setAttribute('required','');
+        qty.setAttribute('autocomplete','false')
+        qty.setAttribute('placeholder','1 xícara')
+        ing = document.createElement('input');
+        ing.name = "ings"
+        ing.setAttribute('list','ingredients');
+        ing.setAttribute('type','text');
+        ing.setAttribute('required','');
+        ing.setAttribute('autocomplete','false')
+        ing.setAttribute('placeholder','farinha de trigo')
+        b = document.createElement('button');
+        b.setAttribute('onclick','this.parentElement.remove();');
+        b.textContent = 'Remover';
+        li.appendChild(qty);
+        li.appendChild(ing);
+        li.appendChild(b);
+        ul.appendChild(li);
+        addedIngredients += 1;
+    }
+</script>
+
+</html>
