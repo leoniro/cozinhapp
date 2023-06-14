@@ -1,15 +1,17 @@
 [
     {
         "id": 0,
-        "name": "",
-        "ingredients": "",
-        "instructions": ""
+        "name": "Strogonoff de Frango",
+        "ingredients": ["Arroz","Frango"],
+        "instructions": "",
+        "author": ""
     },
     {
         "id": 1,
-        "name": "",
-        "ingreds": "",
-        "instructions": ""
+        "name": "Strogonoff de Frango",
+        "ingredients": ["Batata","Cebola"],
+        "instructions": "",
+        "author": ""
     }
 
 ]

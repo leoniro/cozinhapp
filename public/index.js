@@ -14,6 +14,5 @@ request.onreadystatechange = function(response) {
   }
 };
 
-// Set up and make the request.
 request.open('GET', '/api/ingredients', true);
 request.send();

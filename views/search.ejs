@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Busca - Cozinhapp</title>
+</head>
+<body>
+    <h1>Aqui estão as suas receitas!</h1>
+    <% result.forEach( item => { %>
+        <h2><a href="/r/<%= item.id %>"><%= item.name %></a></h2>
+        <p>Você tem <%= item.quantMissing %> de <%= item.quantTotal %> ingredientes!</p>
+        <p>Está faltando: <%= item.missing  %> </p>
+        <hr><br>
+    <% }) %>
+
+</body>
+</html>
