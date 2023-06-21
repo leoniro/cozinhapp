@@ -77,7 +77,7 @@ app.get('/api/ingredients', (req, res) => {
     res.json(ingredients);
 })
 
-let port = 7777
+let port = 666
 app.listen(port,() => {
     console.log('Server listining on port ' + port);
 })
