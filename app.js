@@ -24,10 +24,15 @@ app.get('/',(req,res) => {
 
 // Search: ejs template
 app.post('/busca', (req,res) => {
-    let ings = []
-    for (let key in req.body) {
-        ings.push(req.body[key])
+    console.log(req.body)
+    if ( Array.isArray(req.body.ings) ){
+        ings = req.body.ings;
+    } else {
+        ings = [req.body.ings];
     }
+    //for (let key in req.body) {
+     //   ings.push(req.body[key])
+    //}
 
     result = searchResults(ings,recipes)
     res.render('search', {result});

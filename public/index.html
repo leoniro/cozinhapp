@@ -1,34 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cozinhapp</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body onload="addField();">
     <script type="module" src="./loadIngredientList.js"></script>
-    <h1>Cozinhapp</h1>
 
-    <h2>Adicione seus ingredientes</h2>
+    <div class="intro-frame">
+        <div class="intro">
+            <div class="title">
+                <h1>Bem-vindo ao Cozinhapp!</h1>
+                <p>O Cozinhapp é a solução para quando falta aquela ideia na hora de ir para a cozinha.</p>
+            </div>
+            <a href="#submit-fields"><button>Quero receitas!</button></a>
 
-    <form action="/busca" method="post" autocomplete='off'>
-        <ul id="ul-ingredients"></ul>
-        
-        <ul><li>
-            <button onclick="addField()" type="button">Mais ingredientes</button>
-        </li></ul>
-        <input type="submit" value="Enviar" />
-    </form>
+            <p><a href="/criarReceita">Ou adicione sua própria receita!</a></p>
 
-    <p><a href="/criarReceita">Ou adicione sua própria receita!</a></p>
+        </div>
+    </div>
+
+    <div class="submit-frame">
+        <div id="submit-fields">
+            <h2>Liste seus ingredientes:</h2><br>
+            <form action="/busca" method="post" autocomplete='off'>
+                <ul id="ul-ingredients"></ul>
+                
+                <ul><li>
+                    <button onclick="addField()" type="button">Mais ingredientes</button>
+                </li></ul>
+                <input type="submit" value="Enviar" />
+            </form>
+        </div>
+    </div>
 
     <datalist id="ingredients"></datalist>
 
 </body>
 
 <script>
-    var addedIngredients = 0
-
     function resetIfInvalid(el) {
        if (el.value == "")
            return;
@@ -44,12 +56,13 @@
         ul = document.getElementById('ul-ingredients');
         li = document.createElement('li');
         input = document.createElement('input');
-        input.name = "ing"+addedIngredients;
+        input.name = "ings";
         input.setAttribute('list','ingredients');
         input.setAttribute('onchange','resetIfInvalid(this);');
         input.setAttribute('type','text');
         input.setAttribute('required','');
         input.setAttribute('autocomplete','false')
+        input.setAttribute('class','ingField')
         b = document.createElement('button');
         b.setAttribute('onclick','this.parentElement.remove();');
         b.textContent = 'Remover';

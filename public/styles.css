@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+
+ul {
+    list-style-type: none;
+    display: inline-block
+}
+
+.ingField {
+    height: 20px;
+    width: 200px;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #e9e7e7;
+    box-shadow: 0rem 0rem 0.25rem 0rem rgba(0,0,0,0.75);
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+.intro-frame {
+    background: linear-gradient(109.6deg, rgba(158, 75, 199, 0.808), rgba(120, 81, 204, 0.815)), url("./bg.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.intro {
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    color: white;
+}
+
+.title{
+    margin: 1rem 0;
+}
+
+.title h1 {
+    font-size: 3rem;
+    transition: 0.5s;
+}
+
+.title h1:hover {
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.75);
+}
+
+.intro-frame .intro button {
+    width: 8rem;
+    height: 3rem;
+    padding: 0.25rem;
+    border-radius: 1.25rem;
+    border: none;
+    box-shadow: 0rem 0rem 1rem 0rem rgba(255, 255, 255, 0.75);
+    color: rgba(158, 75, 199, 1);
+    font-size: .9rem;
+    transition: .5s;
+}
+
+.intro-frame .intro button:hover {
+    background-color: rgba(158, 75, 199, 1);
+    color: white;
+}
+
+.intro-frame .intro button:active {
+    background-color: white;
+    color: rgba(158, 75, 199, 1);
+}
+
+.submit-frame {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./texture.png");
+    position: relative;
+}
+
+#submit-fields {
+    width: 25%;
+    border-radius: 1rem;
+    padding: 1rem;
+    /*
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.75);
+    background-color: rgba(158, 75, 199, 1);
+    */
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-area {
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #e9e7e7;
+    box-shadow: 0rem 0rem 0.25rem 0rem rgba(0,0,0,0.75);
+}
+
+form label {
+    font-size: 1.5rem;
+}
+
+form textarea {
+    height: 6rem;
+    resize: none;
+}
+
+.pad-input {
+    padding: 0.5rem;
+}
+
+.submit-btn {
+    font-size: 1rem;
+    height: 2.2rem;
+    background-color: none;
+    padding: 0.25rem;
+    border-radius: 1.25rem;
+    border: 0.05rem solid #9e4bc7;
+    transition: .5s;
+}
+
+.submit-btn:hover {
+    background-color: #9e4bc7;
+}
+
+.submit-btn:active {
+    background-color: none;
+}
+
+.submit-frame p {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 0.8rem;
+}

@@ -1,1 +1,19 @@
-[{"id":0,"name":"Strogonoff de Frango","ingredients":["frango","sal","cebola","manteiga","manteiga","creme de leite","alho","pimenta do reino","maionese","ketchup","cogumelos","batata palha"],"quantities":["400g","a gosto","1","1 colher de sopa","1/3 copo","1 copo","1 dente","a gosto","2 colheres de sopa","meio copo","1 copo","a gosto"],"instructions":"Em uma panela, misture o frango, o alho, a maionese, o sal e a pimenta. \r\n Em uma frigideira grande, derreta a manteiga e doure a cebola. \r\n Junte o frango temperado até que esteja dourado. \r\n Adicione os cogumelos, o ketchup e a mostarda. \r\n Incorpore o creme de leite e retire do fogo antes de ferver. Sirva com arroz branco e batata palha.\r\n","author":"Cozinhapp"},{"id":1,"name":"Creme de Milho","ingredients":["milho","manteiga","caldo de legumes","farinha de trigo","leite","cebola","creme de leite"],"quantities":["1 lata","1 colher de sopa","1 tablete","2 colheres de sopa","1 xícara e meia","1","uma lata"],"instructions":"No liquidificador, bata o milho e o leite e reserve. \r\n Em uma panela, aqueça a manteiga, junte a cebola e refogue um pouco. \r\n Adicione a farinha de trigo e mexa rapidamente. \r\n Deixe dourar e misture o milho batido com o leite ao caldo. \r\n Mexa até dissolvê-lo completamente e cozinhe por cerca de 10 minutos, até obter uma consistência cremosa. \r\n Acrescente o creme de leite, mexa e desligue o fogo.","author":"Cozinhapp"},{"author":"","name":"","instructions":"","ingredients":[null],"quantities":[null],"id":2}]
+[
+    {
+        "id": 0,
+        "name": "Strogonoff de Frango",
+        "ingredients": ["frango","sal","cebola","manteiga","manteiga","creme de leite","alho","pimenta do reino","maionese","ketchup","cogumelos","batata palha"],
+        "quantities": ["400g","a gosto","1","1 colher de sopa","1/3 copo","1 copo","1 dente","a gosto","2 colheres de sopa","meio copo","1 copo","a gosto"],
+        "instructions": "Em uma panela, misture o frango, o alho, a maionese, o sal e a pimenta. \r\n Em uma frigideira grande, derreta a manteiga e doure a cebola. \r\n Junte o frango temperado até que esteja dourado. \r\n Adicione os cogumelos, o ketchup e a mostarda. \r\n Incorpore o creme de leite e retire do fogo antes de ferver. Sirva com arroz branco e batata palha.\r\n",
+        "author": "Cozinhapp"
+    },
+    {
+        "id": 1,
+        "name": "Creme de Milho",
+        "ingredients": ["milho","manteiga","caldo de legumes","farinha de trigo","leite","cebola","creme de leite"],
+        "quantities": ["1 lata","1 colher de sopa","1 tablete","2 colheres de sopa","1 xícara e meia","1","uma lata"],
+        "instructions": "No liquidificador, bata o milho e o leite e reserve. \r\n Em uma panela, aqueça a manteiga, junte a cebola e refogue um pouco. \r\n Adicione a farinha de trigo e mexa rapidamente. \r\n Deixe dourar e misture o milho batido com o leite ao caldo. \r\n Mexa até dissolvê-lo completamente e cozinhe por cerca de 10 minutos, até obter uma consistência cremosa. \r\n Acrescente o creme de leite, mexa e desligue o fogo.",
+        "author": "Cozinhapp"
+    }
+
+]
